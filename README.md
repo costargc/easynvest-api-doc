@@ -7,16 +7,16 @@ This is not official nor supported by [easynvest](https://github.com/easynvest).
 
 Objective to this is to start to document on how onw can we use easynvest XHR calls and turn its structure in an api that should be able to:
 * **Market Data Retrieve:** Retrieve current price, current volumes and market depth.
-* **Execute on order:** Send order eletronicaly to the broker on buy and sell positions.
+* **Execute on order:** Send order electronically to the broker on buy and sell positions.
 
 ## Market Data Retrieve
 
-You need two base parameters ``c=123456`` that inforns your easynvent account and ``q=PETR4,27,0`` that informs what is the the ticket that you will like to retrieve data from and what is the level of the data.
+You need two base parameters ``c=123456`` that informs your easynvent account and ``q=PETR4,27,0`` that informs what is the ticket that you will like to retrieve data from and what is the level of the data.
   ```curl
   curl "https://mdgateway.easynvest.com.br/iwg/snapshot/?t=webgateway&c=123456&q=PETR4,29,0,10"
   ```
   
-Data retrieved is in a json format and could be simplified by doing ``q=PETR4,1,0,0`` that would remove from the data the ``Ts`` and ``BBP``content.
+Data retrieved is in a json format and could be simplified by doing ``q=PETR4,1,0,0`` that would remove from the data the ``Ts`` and ``BBP`` content.
 * **Ts:** Contains data from broker trading for that ticker: 
   ```json
   {
@@ -459,7 +459,7 @@ Executing an order is a little bit different and would require more analysis on 
 curl -d "Ativo=PETR4&Quantidade=100&Preco=22%2C50&Ordem=2&Validade=Dia&AssinaturaEletronica=SECRET&GravarAssinaturaEletronica=false&Operacao=1" -X POST https://hb3.easynvest.com.br/ordem/enviarordem/ -H "Cookie: <cookieHere>" 
 ```
 
-The parameters that must be passed to the curl reques are:
+The parameters that must be passed to the curl request are:
 ```json
 {
     "Ativo": "PETR4",
@@ -474,6 +474,6 @@ The parameters that must be passed to the curl reques are:
 ```
 ```Operacao = 1 (Buy)``` and ```Operacao = 2 (Sell)``` 
 
-Please note that in order for that to work you would need to have the cookie from your loged in session from easynvest and also you will need to pass your ```AssinaturaEletronica``` to the request.
+Please note that in order for that to work you would need to have the cookie from your logged in session from easynvest and also you will need to pass your ```AssinaturaEletronica``` to the request.
 
-This is not a very good way of doing this and it would be much better to have the broker oferring a proper REST API endpoint that we could connect and execute - for know this is a "hack" that can get you up and running in etrading with what they current offer.
+This is not a very good way of doing this and it would be much better to have the broker (easynvest) oferring a proper REST API endpoint that we could authenticate with an apikey and connect and execute what we want. For know, this is what we have to get you up and running in etrading with what they current offer.
