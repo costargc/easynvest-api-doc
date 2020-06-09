@@ -1,4 +1,5 @@
 # easynvest-api &middot; doc
+This is not official nor supported by [easynvest](https://github.com/easynvest).
 
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/master/LICENSE)
 [![WIP](https://img.shields.io/badge/WorkInProgress-WIP-yellow.svg)](https://github.com/costargc/easynvest-api-doc)
