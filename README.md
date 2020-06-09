@@ -1,6 +1,7 @@
 # easynvest-api &middot; doc
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/master/LICENSE)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/master/LICENSE)
+[![WIP](https://img.shields.io/badge/WorkInProgress-Test-yellow.svg)]()
 
 Objective to this is to start to document on how onw can we use easynvest XHR calls and turn its structure in an api that should be able to:
 * **Market Data Retrieve:** Retrieve current price, current volumes and market depth.
