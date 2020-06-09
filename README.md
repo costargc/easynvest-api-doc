@@ -470,3 +470,7 @@ The parameters that must be passed to the curl reques are:
 }
 ```
 ```Operacao = 1 (Buy)``` and ```Operacao = 2 (Sell)``` 
+
+Please note that in order for that to work you would need to have the cookie from your loged in session from easynvest and also you will need to pass your ```AssinaturaEletronica``` to the request.
+
+This is not a very good way of doing this and it would be much better to have the broker oferring a proper REST API endpoint that we could connect and execute - for know this is a "hack" that can get you up and running in etrading with what they current offer.
